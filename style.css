@@ -1,0 +1,1790 @@
+@charset "utf-8";
+
+/* ========================================
+    リセットcss
+========================================= */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-style:normal;
+	font-weight: normal;
+	font-size: 100%;
+	vertical-align: baseline;
+}
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+html{overflow-y: scroll;}
+blockquote, q {quotes: none;}
+blockquote:before, blockquote:after,q:before, q:after {content: ''; content: none;}
+input, textarea,{margin: 0; padding: 0;}
+ol, ul{list-style:none;}
+table{border-collapse: collapse; border-spacing:0;}
+caption, th{text-align: left;}
+a:focus {outline:none;}
+
+/* micro clearfix */
+.cf:before,
+.cf:after {
+    content: " ";
+    display: table;
+}
+.cf:after {clear: both;}
+.cf {*zoom: 1;}
+/* ========================================*/
+body{
+    width: 100% ;
+    overflow: hidden;
+}
+/* ========================================
+ヘッダーここから
+========================================= */
+header{
+    width: 100vw ;
+    position: relative;
+}
+nav{
+    width: 100%;
+    height: 90px;
+    position: fixed;
+    top: 0;
+    z-index: 5000;
+    background-color: rgba(255,255,255,0.5);
+}
+nav ul{
+    width: 729px;
+    height: 25px;
+    margin: 0 auto;
+    line-height: 90px;
+}
+nav li{
+    float: left;
+    padding-left: 54px;
+    display: inline-block;
+
+}
+nav li:last-child{
+    padding-right: 54px;
+}
+.nav a{
+    height: 70px;
+    position: relative;
+    display: inline-block;
+    font-size: 30px;
+    text-decoration: none;
+    font-family: "HGP明朝B";
+    color: #1c3532;
+    font-style: italic;
+    letter-spacing:0.05em;
+}
+.nav a:hover{
+    text-decoration: none;
+    color: #1c3532;
+}
+
+.nav a::after {
+    position: absolute;
+    bottom: 2px;
+    left: 0;
+    content: '';
+    width: 100%;
+    height: 1px;
+    background: #1c3532;
+    opacity: 0;
+    visibility: hidden;
+    transition: .3s;
+}
+.nav a:hover::after {
+    bottom: -4px;
+    opacity: 1;
+    visibility: visible;
+}
+@media screen and (min-width: 992px) {
+header  {
+    margin-bottom: 91%;
+}
+}
+@media screen and (max-width: 991.98px) {
+header  {
+    margin-bottom: 96%;
+}
+}
+@media screen and (min-width: 768px) {
+nav p{
+    display: none;
+}
+}
+@media screen and (max-width: 767.98px) {
+nav ul{
+    display: none!important;
+}
+nav p{
+    width: 125px;
+    height: 59px;
+    font-size: 20px;
+    font-family: "HGP明朝B";
+    color: #1c3532;
+    text-align: center;
+    font-style: italic;
+    letter-spacing: 0.05em;
+    line-height: 35px;
+    margin: 3.2% 37%;
+}
+header  {
+    margin-bottom: 95%;
+}
+}
+/* ========================================
+    ハンバーガーメニューここから
+========================================= */
+@media screen and (min-width: 768px) {
+.hambuger{
+	display: none;
+}
+}
+	
+/* バーガーメニューのボタン*/
+@media screen and (max-width:  767.98px) {
+.menu-trigger {
+	display: inline-block;
+    transition: all .4s;
+    box-sizing: border-box;
+    width: 40px;
+    height: 28px;
+    position: absolute;
+    top: 13%;
+    right: 6%;
+}
+.menu-trigger span {
+	display: inline-block;
+	transition: all .4s;
+	box-sizing: border-box;
+	position: absolute;
+	left: 0;
+	width: 100%;
+	height:2px;
+	background-color: #1c3532;
+	border-radius: 4px;
+	box-shadow: 10px 10px 10px rgba(0,0,0,0.4); 
+}
+.menu-trigger.active span {
+	background-color: #fff;
+}
+
+.menu-trigger.active span:nth-of-type(1) {
+	transform: translateY(9px) rotate(-315deg);
+}
+
+.menu-trigger.active span:nth-of-type(2) {
+	opacity: 0;
+}
+
+.menu-trigger.active span:nth-of-type(3) {
+	transform: translateY(-16px) rotate(315deg);
+}
+.menu-trigger span:nth-of-type(1) {
+	top: 0;
+}
+
+.menu-trigger span:nth-of-type(2) {
+	top: 12px;
+}
+
+.menu-trigger span:nth-of-type(3) {
+	bottom: 0;
+}
+
+.hambuger{
+    width: 100%;
+	position: absolute;
+	top:17px;
+	z-index: 2000;
+	max-width: 100%;
+	padding: 0;
+	position: fixed;
+    z-index: 5000;
+}
+/* /バーガーメニューのボタンここまで*/
+
+/* アコーディオンメニュー */
+.accordion-menu ul {
+	visibility: hidden;
+	transition: visibility 0s linear 0.3s, padding 0s linear 0.3s;
+	margin-top: 0;
+	/* margin-left: -30px; */
+	padding-left: 3%;
+	height: 71px;
+	margin: 0 auto;
+}
+
+.accordion-menu ul li {
+	width: 25%;
+	margin: 0 auto; 
+	transition: height 0.3s ease-in-out, border 0s linear 0.3s;
+	list-style: none;
+	height: 0;
+	text-align: center;
+	float: left;
+}
+
+.accordion-menu ul li a {
+	display: block;
+	line-height: 40px;
+	width: 100%;
+	height: 100%;
+	color: #000;
+	text-decoration: none;
+	font-size: 18px;
+	letter-spacing:0.2em;
+	border-bottom: 1px dotted #000;
+}
+.accordion-menu ul li a:hover {
+	cursor: pointer;
+	opacity: 0.5;
+}
+
+.menu-trigger.active+.accordion-menu ul {
+	margin-top: 73px;
+	padding-top: 10px;
+	visibility: visible;
+	transition: visibility 0s linear 0.0s;
+	background-color: rgba(255,255,255,0.5);
+}
+
+.menu-trigger.active+.accordion-menu ul li {
+	margin-top: 0;
+	height: 40px;
+	display: list-item;
+	transition: height 0.3s ease-in-out;
+
+/* /アコーディオンメニュー */
+}
+}
+@media screen and (max-width: 576.98px) {
+.accordion-menu ul li {
+	float: none;
+}
+.accordion-menu ul{
+	height: 100%;
+}
+}
+/* ========================================
+TOPページメインイメージここから
+========================================= */
+
+#main_img img{
+    display: block;
+    width: 100% ;
+    position: absolute;
+    top: 0;
+    z-index: 2000;
+}
+#main_img h1{
+    position: absolute;
+    left: 0;
+    right:0;
+    margin: auto;
+    color:#1c3532;
+    font-family: "HGP明朝B";
+    font-style: italic;
+    letter-spacing:0.5em;
+    z-index: 3000;
+}
+@media screen and (min-width: 769px) {
+#main_img h1{
+    width: 623px;
+    font-size: 65px;
+    top:346px;
+    line-height: 145px;
+}
+}
+@media screen and (max-width: 768.98px) {
+#main_img h1{
+    width: 531px;
+    font-size: 55px;
+    top:254px;
+    line-height: 145px;
+}
+}
+@media screen and (min-width: 577px) {
+}
+@media screen and (max-width: 576.98px) {
+#main_img h1{
+    width: 291px;
+    font-size: 30px;
+    top:109px;
+    line-height: 82px;
+}
+}
+
+/* ========================================
+TOPページABOUTここから
+========================================= */
+#about{
+    position: relative;
+    width: ;
+    height: 671px;
+}
+#profile{
+    height: 100%;
+    position: absolute;
+    top: 0%;
+    left: 0;
+    right: 0;
+    margin: auto;
+    z-index: 4000;
+}
+#profile p{
+    display: inline-block;
+    position: absolute;
+    right: 0;
+    background-image: url(image/anjuito_portfolio/pro_textbox.png);
+    background-repeat:no-repeat ;
+    z-index: 3000;
+    color: #fff;
+    letter-spacing: 0.3em;
+    text-align: center;
+}
+#profile img{
+    position: absolute;
+    z-index: 4000;
+}
+.btn--purple,
+a.btn--purple {
+    position: absolute;
+    left:0;
+    right: 0;
+    margin: auto;
+    color: #fff;
+    background-color: #5f52a0;
+    z-index: 3000;
+    width: 200px;
+    height: 60px;
+    font-size: 20px;
+    font-family: "HGP明朝B";
+    line-height: 47px;
+    border-bottom: 5px solid #3b3380;
+    letter-spacing: 0.1em;
+
+}
+.btn--purple:hover,
+a.btn--purple:hover {
+    color: #fff;
+    background: #5f52a0;
+    border-bottom: 2px solid #3b3380;
+    transform: translateY(5px);
+}
+
+a.btn--radius {
+    border-radius: 100vh;
+}
+@media screen and (min-width: 769px) {
+#profile p{
+    background-size: 100%;
+}
+#bg01{
+    width: 100%;
+    position: absolute;
+    top: -8%;
+    z-index: 3000;
+}
+#bg02{
+    display: none;
+}
+.btn--purple,
+a.btn--purple {
+    top:68%;
+}
+}
+@media screen and (max-width: 768.98px) {
+#profile p{
+    background-size: 92%;
+}
+#bg01{
+    display: none;
+}
+#bg02{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: -8%;
+    z-index: 3000;
+}
+.btn--purple,
+a.btn--purple {
+    top:64%;
+}
+}
+@media screen and (min-width: 577px) {
+#profile{
+    width: 797px;
+}
+#profile img{
+    width: 309px;
+    left: 5%;
+}
+#profile p{
+    width:510px;
+    height: 510px;
+    line-height: 44px;
+    padding-top: 65px;
+}
+}
+@media screen and (max-width: 576.98px) {
+#about{
+    height: 333px;    
+}
+#profile{
+    width: 371px;
+    height: 238px;
+}
+#profile img{
+    width: 136px;
+    left: 1%;
+}
+#profile p{
+    width: 234px;
+    height: 227px;
+    line-height: 17px;
+    padding-top: 40px;
+    font-size: 10px;
+    background-size: 100%;
+}
+.btn--purple, a.btn--purple{
+    top: 78%;
+    width: 138px;
+    height: 51px;
+    font-size: 16px;
+    line-height: 35px;
+}
+}
+
+/* ========================================
+TOPページWORKSここから
+========================================= */
+#works{
+    position: relative;
+}
+#works_bg{
+    width: 100%;
+    position: absolute;
+    /* top: 1849px; */
+    top:-7px;
+    z-index: 3000;
+}
+#bg_leaf1{
+    position: absolute;
+    /* top:1722px; */
+    top:-86px;
+    z-index: 3000;
+}
+#bg_leaf2{
+    position: absolute;
+    /* top: 1686px; */
+    right: 0;
+    z-index: 3000;
+}
+#works h2{
+    width: 272px;
+    font-size: 65px;
+    color: #9e6936;
+    font-family: "HGP明朝B";
+    font-style: italic;
+    letter-spacing: 0.1em;
+    z-index: 3500;
+    position: absolute;
+    /* top: 1946px; */
+    top:8%;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+#works ul{
+    height: 1105px;
+    position: absolute;
+    /* top: 2080px; */
+    left: 0;
+    right: 0;
+    margin: auto;
+    z-index: 3000;
+}
+#works li{
+    width: 350px;
+    height: 318px;
+    background-color: #cba590;
+    position: relative;
+    /* float: left; */
+}
+#middle{
+    width: 820px;
+    margin: 0 auto;
+}
+#works li:hover{
+    -webkit-transform: translateY(-8px);
+    -ms-transform: translateY(-8px);
+    transform: translateY(-8px);
+}
+#works01 ,#works02 ,#works03 ,#works04, 
+#works05,#works06 ,#works07 ,#works08 {
+    background-size: 70%;
+    background-repeat:no-repeat ;
+    background-position: 50%;
+}
+#works01{
+    background-image: url(image/anjuito_portfolio/design01.png);
+}
+#works02{
+    background-image: url(image/anjuito_portfolio/design02.png);
+}
+#works03{
+    background-image: url(image/anjuito_portfolio/design03.png);
+}
+#works04{
+    background-image: url(image/anjuito_portfolio/carus_logo01.png);
+    background-size: 100%;
+    background-position: 50% 18%;
+}
+#works05{
+    background-image: url(image/anjuito_portfolio/carus_logo03.png);
+    background-size: 77%;
+    background-position: 50% 40%;
+}
+#works06{
+    background-image: url(image/anjuito_portfolio/gym_banner.png);
+    background-position: top 17% left 50%;
+}
+#works07{
+    background-image: url(image/anjuito_portfolio/olive_banner.png);
+    background-position: top 17% left 50%;
+}
+#works08{
+    background-image: url(image/anjuito_portfolio/leather_banner.png);
+    background-position: top 17% left 50%;
+}
+
+#works01 a,#works02 a,#works03 a,#works04 a,
+#works05 a,#works06 a,#works07 a,#works08 a{
+    display: block;
+    color: #1c3532;
+    width: 350px;
+    height: 288px;
+    text-decoration: none;
+}
+#works06 a,#works07 a,#works08 a{
+    position: absolute;
+    bottom:0;
+    height: 319px;
+}
+#works01 a:hover,#works02 a:hover,#works03 a:hover,#works04 a:hover,
+#works05 a:hover,#works06 a:hover,#works07 a:hover,#works08 a:hover{
+    background-color: rgba(203,165,144,0.5);
+    background-position: -100% 100%;
+}
+#works01 h3,#works02 h3,#works03 h3{
+    width: 220px;
+    height: 24px;
+    font-size: 20px;
+    margin: 17px auto;
+    font-family: "HGP明朝B";
+}
+#works02 h3{
+    width: 151px;
+}
+#works04 h3,#works05 h3{
+    width: 258px;
+    font-size: 20px;
+    font-family: "HGP明朝B";
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+    bottom: 14%;
+}
+#works02 h3{
+    width: 167px;
+}
+#works03 h3{
+    width: 109px;
+}
+#works06 h3{
+    width: 156px;
+    height: 55px;
+    font-size: 18px;
+    margin: 254px auto;
+    font-family: "HGP明朝B";
+}   
+#works07 h3,#works08 h3{
+    width: 251px;
+    height: 82px;
+    font-size: 18px;
+    font-family: "HGP明朝B";
+    margin: auto;
+    margin-top: 226px;
+}
+
+#works01 span,#works02 span,#works03 span{
+    position:absolute;
+    left: 5%;
+    bottom: 5%;
+}
+#works02 span{
+    left: 13%;
+}
+#works03 span{
+    left: 24%;
+}
+@media screen and (min-width: 1025px) {
+#works{
+    margin-top: 12%;
+    height: 1522px;
+}
+#works ul{
+    width: 1230px;
+    top:22%;
+}
+#upper,#middle,#lower{
+    display: flex;
+}
+}
+@media screen and (max-width: 1024.98px) {
+#works{
+    margin-top: -8%;
+    height: 1807px;
+}
+#works_bg{
+    height: 2134px;
+}
+#works ul{
+    width: 825px;
+    top:16%;
+}
+#works li{
+    float: left;
+}
+}
+@media screen and (min-width: 769px) {
+#works li{
+    margin: 30px;
+}
+#bg_leaf1{
+    width: 304px;
+}
+#bg_leaf2{
+    width: 376px;
+    top:-200px;
+}
+}
+@media screen and (max-width: 768.98px) {
+#works{
+    margin-top: -17%;
+}
+#works ul{
+    width: 740px;
+}
+#works li{
+    margin: 10px;
+}
+#bg_leaf1{
+
+width: 237px;}
+#bg_leaf2{
+    width: 327px;
+    top:-237px;
+}
+}
+@media screen and (max-width: 576.98px) {
+#works{
+    height: 2397px;
+}
+#works h2{
+    width: 206px;
+    font-size: 50px;
+    top: 3%;
+}
+#bg_leaf2{
+    width: 177px;
+    top: -140px;
+}
+#bg_leaf1 {
+    width: 120px;
+    top: -50px;
+}
+#works ul {
+    width: 313px;
+    top: 7%;
+}
+#works li{
+    width: 293px;
+    height: 263px;
+    float: none;
+}
+#works01 a, #works02 a, #works03 a, #works04 a, #works05 a, #works06 a, #works07 a, #works08 a{
+    width: 293px;
+}
+#works01 h3{
+    width: 204px;
+    height: 48px;
+    line-height: 48px;
+}
+#works02 h3{
+    width:  151px;
+    height: 48px;
+    line-height: 48px;
+}
+#works03 h3{
+    width:  107px;
+    height: 48px;
+    line-height: 48px;
+}
+#works06 h3{
+    margin: 265px auto;
+}
+#works07 h3, #works08 h3{
+    margin-top: 243px;
+}
+#works01 span, #works02 span, #works03 span{
+    font-size: 13px;
+}
+#works_bg {
+    height: 2522px;
+}
+}
+/* ========================================
+TOPページSKILLここから
+========================================= */
+#skill{
+    position: relative;
+    z-index: 4000;
+}
+#skill_bg01,#skill_bg02{
+    width: 100%;
+    position: absolute;
+    z-index: 3000;
+}
+#skill h4{
+    font-size: 65px;
+    color: #fe7a0b;
+    font-family: "HGP明朝B";
+    font-style: italic;
+    letter-spacing: 0.1em;
+    z-index: 3500;
+    position: absolute;
+    /* top: 3662px;; */
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 272px;
+}
+#skill ul{
+    width: 923px;
+    position: absolute;
+    /* top: 3862px;; */
+    left: 0;
+    right: 0;
+    margin: auto;
+    z-index: 3000;
+}
+#skill li{
+    width: 411px;
+    float: left;
+    margin: 25px;
+}
+#illustrator,#photoshop{
+    background-image: url(image/anjuito_portfolio/AI.png),url(image/anjuito_portfolio/level3.png);
+    background-size: 18%,64%;
+    background-repeat:no-repeat ;
+    background-position:top 3% left 0,top 21% left 62%;
+}
+#illustrator span,#photoshop span,#htmlcss span,#bootstrap span,#js span{
+    position: absolute;
+    top:20%;
+    left:3%;
+    font-size: 18px;
+    font-family: "HGP明朝B";
+    color:#1c3532;
+}
+#photoshop{
+    background-image: url(image/anjuito_portfolio/PS.png),url(image/anjuito_portfolio/level3.png);
+    background-size: 19%,64%;
+}
+#photoshop span{
+    position: absolute;
+    left: 53.5%;
+}
+#htmlcss,#bootstrap{
+    background-image: url(image/anjuito_portfolio/HTMLCSS.png),url(image/anjuito_portfolio/level2.png);
+    background-size: 18%,64%;
+    background-repeat:no-repeat ;
+    background-position:top 3% left 0,top 21% left 62%;
+}
+#htmlcss{
+    background-position:top 13% left 0,top 21% left 62%;
+}
+#htmlcss span{
+    position: absolute;
+    top: 54%;
+    left: 3%;
+}
+#bootstrap{
+    background-image: url(image/anjuito_portfolio/B.png),url(image/anjuito_portfolio/level2.png);
+}
+
+#bootstrap span{
+    position: absolute;
+    top:54%;
+    left: 53.5%;
+}
+#js{
+    background-image: url(image/anjuito_portfolio/JS.png),url(image/anjuito_portfolio/level2.png);
+    background-size: 19%,64%;
+    background-repeat:no-repeat ;
+    background-position:top 13% left 0,top 21% left 62%;
+}
+#js span{
+    position: absolute;
+    top: 87%;
+    left: 3%;
+}
+@media screen and (min-width: 1025px) {
+#skill{
+    height: 1373px;
+}
+#skill h4{
+    top:30%;
+}
+#skill ul{
+    top:40%;
+}
+}
+@media screen and (max-width: 1058.98px) {
+#skill_bg01,#skill_bg02{
+    height: 100%;
+}    
+}
+@media screen and (max-width: 1024.98px) {
+#skill{
+    height: 1350px;
+}
+#skill h4{
+    top:23%;
+}
+#skill ul{
+    top:33%;
+}
+}
+@media screen and (min-width: 769px) {
+#skill li{
+    width: 411px;
+    height: 172px;
+}
+#illustrator span,#photoshop span,#htmlcss span,#bootstrap span,#js span{
+    font-size: 18px;
+}
+}
+@media screen and (max-width: 768.98px) {
+#skill{
+    height: 1013px;
+}
+#skill h4{
+    top:23%;
+}
+#skill li{
+    width: 296px;
+    height: 114px;
+}
+#skill ul {
+    width: 693px;
+    top: 34%;
+}
+#skill li {
+    width: 296px;
+}
+#illustrator span,#photoshop span,#htmlcss span,#bootstrap span,#js span{
+    font-size: 14px;
+}
+}
+@media screen and (min-width: 577px) {
+#skill_bg02{
+    display: none;
+}
+}
+@media screen and (max-width: 576.98px) {
+#skill{
+    height: 1219px;
+}
+#skill h4 {
+    top: 13%;
+    font-size: 50px;
+    width: 167px;
+}   
+#skill ul{
+    width: 319px;
+    top: 19%;
+}
+#skill li{
+    width: 319px;
+    height: 185px;
+    float: none;
+    position: relative;
+    margin: 0;
+}
+
+#illustrator span, #photoshop span, #htmlcss span, #bootstrap span, #js span{
+    font-size: 14px;
+    position: absolute;
+    left:0;
+    top:53%;
+    top: 44%;
+}
+#skill_bg01{
+    display: none;
+}
+#skill_bg02{
+    height: 1232px;
+}
+}
+/* ========================================
+TOPページCONTACTここから
+========================================= */
+#contact{
+    width: 100%;
+    position: relative;
+    z-index: 4000;
+}
+#contact img{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    z-index: 3000;
+}
+
+#contact h4{
+    font-size: 65px;
+    color: #1c3532;
+    font-family: "HGP明朝B";
+    font-style: italic;
+    letter-spacing: 0.1em;
+    z-index: 3500;
+    position: absolute;
+    /* top: 115px; */
+    top:8%;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 356px;
+}
+#contact a{
+    width: 444px;
+    height: 400px;
+    position: absolute;
+    top: 262px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    z-index: 3000;
+    font-size: 30px;
+    text-decoration: none;
+    color:#fff ;
+    background-image: url(image/anjuito_portfolio/mail.png);
+    background-position: top 30% left 50%;
+    background-repeat: no-repeat;
+    background-size: 78%;
+}
+#contact a:hover{
+    background-image: url(image/anjuito_portfolio/mail_hover.png);
+    background-position: top 30% left 50%;
+    background-repeat: no-repeat;
+    color: #ceb4af;
+
+}
+#contact span{
+    position: absolute;
+    top: 83%;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 323px;
+}
+@media screen and (min-width: 769px) {
+#contact{
+    height: 1217px;
+}
+}
+@media screen and (max-width: 768.98px) {
+#contact{
+    height: 751px;
+}
+}
+@media screen and (max-width: 576.98px) {
+#contact{
+    height: 411px;
+}
+#contact h4{
+    font-size: 50px;
+    width: 273px;
+}
+#contact a{
+    background-size: 42%;
+    width: 344px;
+    height: 200px;
+    top: 131px;
+}
+#contact span{
+    font-size: 20px; 
+    width: 219px;   
+}
+}
+/* ========================================
+TOPページフッターここから
+========================================= */
+footer{
+    position: relative;
+    width: 100%;
+    height: 70px;
+    /* top:6019px; */
+    background: linear-gradient(to bottom, #a9786f, #c5ada8);
+    z-index: 4000;
+}
+footer p{
+    width: 100%;
+    display: inline-block;
+    line-height: 70px;
+    margin: 0 auto;
+    text-align: center;
+}
+#ptop_bt img {
+    position: fixed;
+    bottom: 70px;
+    right: 0;
+    width: 50px;
+    height: 50px;
+}
+/* ======================================
+ ========================================
+ABOUTページここから
+========================================= 
+========================================= */
+main{
+    position: relative;
+    height: 1268px;
+}
+#content01,#content02{
+    position: absolute;
+    top: 10%;
+    left:0;
+    right: 0;
+    margin: auto;
+    width: 725px;
+    height: 576px;
+    background-image: url(image/portfolio_about/about_textbox.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: top 100% center;
+}
+#content01 h1,#content02 h2{
+    width: 251px;
+    margin: 0 auto;
+    font-family: "HGP明朝B";
+    color: #1c3532;
+    font-style: italic;
+    letter-spacing:0.05em;
+    font-size: 65px;
+}
+#content01 p{
+    margin-top: 54px;
+    margin-bottom: 0 ;
+    margin-left: 54px;
+    font-size: 18px;
+    font-family: "HGP明朝B";
+    letter-spacing:0.05em;
+    color: #1c3532;
+}
+#content02{
+    top: 60%;
+    height: 409px;
+    background-size: 100% 70%;
+}
+#content02 h2{
+    padding-top: 30px;
+}
+#content02 ul{
+    width: 724px;
+    position: absolute;
+    top: 44%;
+}
+#content02 li{
+    margin-bottom: 25px;
+    margin-left: 17px;
+    padding-left: 18px;
+    background-image: url(image/portfolio_about/point.png);
+    background-repeat: no-repeat;
+    background-size:15px 15px;
+    background-position: bottom 5px left 0;
+}
+@media screen and (min-width: 1025px) {
+#main_bg01{
+    position: absolute;
+    top:0;
+    width: 100%;
+}
+#main_bg02{
+    display: none;
+}
+}
+@media screen and (max-width: 1024.98px) {
+#main_bg01{
+    display: none;
+}
+#main_bg02{
+    position: absolute;
+    top:0;
+    object-fit: cover;
+    width: 100%;
+    height: 1269px;
+}
+}
+@media screen and (min-width: 577px) {
+}
+@media screen and (max-width: 576.98px) {
+#content01 p{
+    margin: 21px;
+}
+#content01{
+    width: 408px;
+    height: 705px;
+    top:8%;
+    background-size: 244%;
+}
+#content02{
+    width: 411px;
+    height: 475px;
+    top: 64%;
+    background-position: top 72% center;
+    background-size: 116% 70%;
+}
+#content01 h1, #content02 h2{
+    font-size: 50px;
+    width: 195px;
+}
+#content02 ul{
+    width: 410px;
+    top: 28%;
+}
+}
+/* ======================================
+ ========================================
+WORKSページここから
+========================================= 
+========================================= */ 
+#wrap01{
+    height: 3030px;
+}
+#workMain{
+    background-color: #113233;
+    height: 100%;
+    position: relative;
+}
+/* -- ローカルナビゲーション -- */  
+.localnavi {  
+    width: 658px;
+    height: 45px;
+    position: absolute;
+    top:162px;
+    left: 0;
+    right: 0;
+    margin: auto;
+}    
+.localnavi li { 
+    width: 164px;
+    float: left;
+}  
+.localnavi a {  
+    text-decoration: none;  
+    display: block;  
+    color: #cccccc;
+    font-size: 20px;
+    margin: 0 auto;
+}
+.work01{
+    width: 126px;
+}
+.work02{
+    width: 97px;
+}
+.work03{
+    width: 140px;
+}
+/* .localnavi a:hover {  
+  text-decoration: none;  
+  text-decoration: none;
+  color: #fff;
+  border-bottom:3px dotted#cccccc;
+  padding-bottom: 3px;
+}   */
+
+#next_btn a{
+    width: 181px;
+    position: absolute;
+    bottom: 16px;
+    right: 154px;
+    font-size: 20px;
+    background-image: url(image/portfolio_works/next_bt.png);
+    background-position: bottom 60% right;
+    background-repeat: no-repeat;
+    background-size: 25%;
+    color: #fff;
+}
+#next_btn a span{
+    position: absolute;
+    bottom: 21px;
+    right: 144px;
+    font-size: 18px;
+}
+#next_btn a:hover{
+    text-decoration: none;
+    opacity: 0.5;
+}
+#workMain h1{
+    width: 347px;
+    margin: 0 auto;
+    font-family: "HGP明朝B";
+    color: #9e6936;
+    font-style: italic;
+    letter-spacing: 0.05em;
+    font-size: 65px;
+    padding-top: 270px;
+} 
+
+table{
+    /* width: 1030px; */
+    width: 74%;
+    height: 2318px;
+    background-color: #cba590;  
+    margin: 75px auto;
+    
+}
+tbody{
+    width: 615px;
+    margin: 84px auto;
+    display: block;
+}
+tr{
+    width: 615px;
+    color: #fff;
+    display: inline-block;
+    margin: 0 auto;
+}
+th,td{
+    width: 615px;
+    float: left;
+    padding-left: 20px;
+}
+th{
+    height: 34px;
+    background-image: url(image/portfolio_works/works_headline.png);
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+td{
+    padding-top: 10px;
+    padding-bottom: 20px;
+}
+td ul{
+    list-style: square; 
+}
+td li{
+    margin-left: 56px;
+}
+td li:first-child{
+    list-style: none;
+    margin-left:0 ;
+
+}
+td li span{
+    list-style: none;
+}
+
+#purpose td li:first-child,#target td li:first-child,#banner01_tb td li:first-child,#banner03_tb td li:first-child{
+    margin-left: 56px;
+    list-style: inherit;
+}
+td h2,td h3{
+    width: 288px;
+    height: 758px;
+    float: left;
+    background-repeat: no-repeat;
+    background-size: 96%;
+    padding-left: 110px;
+    position: relative;
+}
+
+td h2{
+    background-image: url(image/portfolio_works/befor.png);
+    background-position: top 12% center;
+} 
+td h3{
+    position: relative;
+    background-image: url(image/portfolio_works/after.png);
+    background-position: top 58% center;
+}
+#work td h2 a{
+    width: 119px;
+    height: 40px;
+    background-image: url(image/portfolio_works/next_bt.png);
+    background-position: bottom 43% left 10%;
+    background-repeat: no-repeat;
+    background-size: 34%;
+    position: absolute;
+    left: 0;
+    right: 0;
+    padding-left: 58px;
+    margin: auto;
+    bottom: 37px;
+    color: #fff;
+    text-decoration: none;
+}
+#work td h3 a:hover{
+    color:#fff;
+    text-decoration: none;
+}
+#work td h3 span:hover{
+    text-decoration: none;
+    color: #fff;
+    border-bottom:3px dotted#fff;
+    padding-bottom: 3px;
+}
+#respon img{
+    float: left;
+    margin: 22px;
+}
+#tab{
+    width: 300px;
+}
+#smh{
+    width: 202px;
+}
+#works_footer{
+    background: rgba(17,50,51,0.5);
+}
+#works_footer small{
+    color: #000;
+}
+@media screen and (max-width: 768.98px) {
+#wrap01{
+    height: 3916px;
+    background-color: #113233;
+    position: relative;
+}
+.localnavi{
+    width: 545px;
+    top: 4%;
+}
+.localnavi li{
+    width: 136px;
+    padding: 7px 0;
+}
+.localnavi a{
+    font-size: 18px;
+}
+.work01 {
+    width: 113px;
+}
+.work02 {
+    width: 88px;
+}
+.work03 {
+    width: 126px;
+}
+tbody{
+    width: 80%;
+}
+tr,th,td{
+    width: 100%;
+}
+td h2,td h3{
+    margin: auto;
+    float: none;
+}
+
+td h2{
+    background-position: top 55% center;
+    height: 379px;
+}
+td h3{
+    height: 754px;
+   
+}
+#respon img{
+    float: none;
+    display: block;
+    margin: 22px auto;
+}
+#next_btn a {
+    right: 130px;
+}
+}
+@media screen and (min-width: 577px) {
+
+.localnavi li:first-child{
+    border-left: 1px solid #cccccc;  
+}
+.localnavi li { 
+    border-right: 1px solid #cccccc;  
+}
+.localnavi a:hover {  
+    text-decoration: none;  
+    color: #fff;
+    border-bottom:3px dotted#cccccc;
+    padding-bottom: 3px;
+  }    
+}
+@media screen and (max-width: 576.98px) {
+#wrap01 {
+    height: 4073px;
+}    
+#workMain h1{
+    width: 269px;
+    font-size: 50px;
+}
+.localnavi{
+    width: 137px;
+    top: 2.3%;
+}
+.localnavi li{
+    float: none;
+    border-bottom: 1px solid #cccccc;
+}
+.localnavi a:hover {  
+    text-decoration: none;  
+    color: #fff;
+}    
+
+td{
+    padding-left: 0;
+}
+td h2, td h3{
+    width:250px;
+    padding-left: 86px;
+}
+#tab{
+    width: 252px;
+}
+#next_btn a {
+    right: 84px;
+}
+}
+/* ======================================
+ ========================================
+WORKS02ページここから
+========================================= 
+========================================= */ 
+#wrap02{
+   height: 3698px;
+}
+#comp img{
+    width: 280px;
+    display: block;
+    margin: 30px auto;
+}
+#res img{
+    display: block;
+    width: 225px;
+    margin: 22px auto;
+    float: none;
+}
+#res a{
+    width: 119px;
+    height: 40px;
+    background-image: url(image/portfolio_works/next_bt.png);
+    background-position: bottom 43% left 10%;
+    background-repeat: no-repeat;
+    background-size: 34%;
+    position: absolute;
+    left: 0;
+    right: 0;
+    padding-left: 58px;
+    margin: auto;
+    bottom: 21%;
+    color: #fff;
+    text-decoration: none;
+    font-size: 25px;
+}
+#res a:hover{
+    color:#fff;
+    text-decoration: none;
+}
+#res a span:hover{
+    text-decoration: none;
+    color: #fff;
+    border-bottom:3px dotted#fff;
+    padding-bottom: 3px;
+}
+@media screen and (max-width: 576.98px) {
+#wrap02{
+    height: 4073px;
+}
+#comp img{
+    width: 223px;
+}
+}
+/* ======================================
+ ========================================
+WORKS03ページここから
+========================================= 
+========================================= */ 
+#wrap03{
+    height: 2146px;
+}
+#work03_tb{
+    height: 1566px;
+}
+#detail img{
+    width: 290px;
+    float: left;
+    margin-top: 20px;
+}
+#detail ul{
+    margin-left: 21px;
+    float: left;
+    margin-top: 20px;
+}  
+#detail li{
+    width: 244px;
+    margin-left: 40px;
+    font-size: 14px;
+}
+#detail li:first-child{
+    list-style: none;
+    margin-left: 0;
+}
+#detail span{
+    background-image: url(image/portfolio_about/point.png);
+    background-position: bottom 28% left 1%;
+    background-repeat: no-repeat;
+    background-size: 11px;
+    padding-left: 20px;
+
+}
+#detail a{
+    width: 119px;
+    height: 40px;
+    background-image: url(image/portfolio_works/next_bt.png);
+    background-position: bottom 43% left 10%;
+    background-repeat: no-repeat;
+    background-size: 34%;
+    position: absolute;
+    left: 0;
+    right: 0;
+    padding-left: 58px;
+    margin: auto;
+    bottom: 33%;
+    color: #fff;
+    text-decoration: none;
+    font-size: 25px;
+}
+#detail a:hover{
+    color:#fff;
+    text-decoration: none;
+}
+#detail a p:hover{
+    text-decoration: none;
+    color: #fff;
+    border-bottom:3px dotted#fff;
+    padding-bottom: 3px;
+}
+#work03_tb #respon {
+    margin-top: 55px;
+}    
+
+.work04{
+    width: 126px;
+}
+#next a{
+    width: 181px;
+    position: absolute;
+    bottom: 16px;
+    right: 154px;
+    font-size: 15px;
+    background-image: url(image/portfolio_works/next_bt.png);
+    background-position: bottom 60% right;
+    background-repeat: no-repeat;
+    background-size: 25%;
+    color: #fff;
+}
+#next a span{
+    position: absolute;
+    bottom: 21px;
+    right: 144px;
+    font-size: 18px;
+}
+#next a:hover{
+    text-decoration: none;
+    opacity: 0.5;
+}
+@media screen and (max-width: 768.98px) {
+#wrap03{
+    height: 3046px;
+}
+}
+@media screen and (max-width: 576.98px) {
+#detail img{
+    width: 236px;
+}
+#next a{
+    bottom: 323px;
+    right: 70px;
+    font-size: 17px;
+}
+}
+/* ======================================
+ ========================================
+WORKS OTHERSページここから
+========================================= 
+========================================= */ 
+#wrap04{
+    height: 7493px;
+}
+#wrap04 ul{
+    top: 162px;
+}
+#wrap04 h1{
+    width: 456px;
+}
+#wrap04 h1 span{
+    font-size: 45px;
+    font-style: italic;
+}
+#logo01_tb,#logo02_tb,#banner01_tb,#banner02_tb,#banner03_tb{
+    height: 1080px;
+}
+#logo01_tb tr,#logo02_tb tr,#banner01_tb tr{
+    margin-bottom: 20px;
+}
+#wrap04 h2,#wrap04 h3,#wrap04 h4,#wrap04 h5,#wrap04 h6{
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+    color: #fff;
+    font-family: "HGP明朝B";
+    letter-spacing: 0.1em;
+    width: 129px;
+    border-bottom: 2px solid #fff;
+    font-size: 32px;
+    padding-top: 20px;
+}
+#wrap04 h2{
+    top: 430px;
+}
+#wrap04 h4,#wrap04 h5,#wrap04 h6{
+    width: 170px;
+}
+#wrap04 tbody{
+    margin: 110px auto;
+}
+#name img{
+    width: 406px;
+    margin: 0 auto;
+    display: block;
+}
+#logo01_tb #name td,#logo01_tb #inCharge td,#logo01_tb #period td,#logo01_tb #target td,
+#logo02_tb #name td,#logo02_tb #inCharge td,#logo02_tb #period td,#logo02_tb #target td,#logo02_tb #purpose td,
+#banner01_tb #name td,#banner01_tb #inCharge td,#banner01_tb #period td,#banner01_tb #target td,
+#banner02_tb #period td,#banner02_tb #target td,
+#banner03_tb #inCharge td,#banner03_tb #period td,#banner03_tb #target td{    
+    text-align: center;
+    font-size: 18px;
+}
+#logo02_tb img{
+    width: 262px;
+    padding-top: 15px;
+}
+#banner02_tb img{
+    width: 304px;
+    padding-top: 15px;
+}
+#banner01_tb img{
+    width: 246px;
+    padding-top: 15px;
+}
+#banner03_tb img{
+    width: 275px;
+    padding-top: 15px;
+}
+#prev_btn a{
+    width: 181px;
+    position: absolute;
+    bottom: 16px;
+    left: 172px;
+    font-size: 20px;
+    background-image: url(image/portfolio_works/prev_arrow.png);
+    background-position: bottom 60% left;
+    background-repeat: no-repeat;
+    background-size: 25%;
+    color: #fff;
+    padding-left: 55px;
+}
+#prev_btn a span{
+    position: absolute;
+    bottom: 21px;
+    right: 90px;
+    font-size: 18px;
+}
+#prev_btn a:hover{
+    text-decoration: none;
+    opacity: 0.5;
+}
+@media screen and (max-width: 768.98px) {
+#wrap04{
+    height: 7596px;
+}
+    
+#prev_btn a{
+    bottom: 23px;
+}
+}
+@media screen and (max-width: 576.98px) {
+#wrap04{
+    height: 100%;
+}
+#wrap04 h1{
+    width: 343px;
+}
+#wrap04 h1 span{
+    font-size: 30px;
+}
+#name img{
+    width: 262px;
+}
+#logo02_tb img{
+    width: 240px;
+}
+#banner01_tb img{
+    width: 202px;
+}
+#banner02_tb img{
+    width: 257px;
+}
+#banner03_tb img{
+    width: 223px;
+}
+#prev_btn a{
+    left: 27px;
+}
+}

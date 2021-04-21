@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>AnjuIto Portfolio</title>
+    <link rel="stylesheet" href="style.css" type="text/css" media="screen">
+    <link rel="icon" type="image/x-icon" href="#">
+    <!-- Bootstrap CSS -->
+     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+  <!-- ここまで -->
+</head>
+
+<body>
+<!-- ヘッダーここから -->
+    <nav>
+        <ul class="nav"> <!-- text-decoration:noneを効かせる為にidを付ける。 -->
+            <li><a href="index.html">HOME</a></li>
+            <li><a href="portfolio_works.html">WORKS</a></li>
+            <li><a href="index.html#skill">SKILL</a></li>
+            <li><a href="index.html#contact">CONTACT</a></li>
+        </ul>
+        <p>ANJU ITO<br/> PORTFOLIO</p>
+    </nav>
+
+    <!-- バーガーメニューここから -->
+    <div class="hambuger" class="container">
+        <a class="menu-trigger" href="#"><span></span> <span></span> <span></span></a>
+
+        <div class="accordion-menu">
+            <!-- アコーディオンメニューここから -->
+            <ul>
+                <li><a href="index.html">HOME</a></li>
+                    <li><a href="portfolio_works.html">WORKS</a></li>
+                    <li><a href="index.html#skill">SKILL</a></li>
+                    <li><a href="index.html#contact">CONTACT</a></li>
+            </ul>
+            <!-- アコーディオンメニューここまで -->
+        </div>
+    </div>
+    <!-- バーガーメニューここまで -->
+
+    <main>
+        <img id="main_bg01" src="image/portfolio_about/about_bg.png" alt="背景画像">
+        <img id="main_bg02" src="image/portfolio_about/about_bg02.png" alt="背景画像">
+        <div id="content01">
+            <h1>ABOUT</h1>
+            <p>
+                　20代のうちに手に職をつけたいと考えているうちに、<br/>
+                WEBデザイナーという職種を知りました。<br/>
+                今の職場で新製品のロゴ案を提出する機会があり、<br/>
+                そこで、製品を表現する難しさや、作った人の思いを考える楽しさを知り、<br/>
+                職にできたらなという思いでオンラインスクールで学び、転職活動に至りました。<br/>
+            </p>
+            <p>
+                　私は仕事をする上で円滑に行うためには、相手との認識の違い<br/>
+                が発生しないよう、情報の聞き取りや共有が重要であると考えていたので、<br/>
+                コミュニケーションを大事にしてきました。<br/>
+                コミュニケーションを取り、相手のことを知ることで、その人の意向がわかるように<br/>
+                なれば、やりとりがスムーズにいくと思うので、今後もコミュニケーション大事に<br/>
+                仕事をしていきたいと思います。<br/>
+            </p>
+            <p>
+                今後異業種ではありますが、誠実性と向上心で自己の成長に励んでいきます。
+            </p>
+        </div>
+        <div id="content02">
+            <h2>VISION</h2>
+            <ul>
+                <li>実務経験を数多く積み、デザインとコーディング、両方のスキルを上げていく</li>
+                <li>多くの優れたデザインを見て感性を磨き、デザインのバリエーションを増やす</li>
+                <li>クライアントの方が抱える課題やユーザビリティ向上に繋げるデザインが
+                    できるようになる</li>
+                <li>クライアントの意向をくみ取り、求められている以上の成果を出せるような
+                    デザイナーになる</li>
+            </ul>
+        </div>
+    </main>
+
+    <footer>
+        <p><small>Copyright©ANJU ITO. All Rights Reserved.</small></p>
+    </footer>
+</body>
+<!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.bundle.min.js"></script>
+<script type="text/javascript">
+    $(function () {
+      $('[data-toggle="tooltip"]').tooltip();
+    })
+  </script>
+<script>
+    $(document).ready(function() {
+        // バーガーメニュークリック時
+        $('.menu-trigger').on('click', function() {
+    
+            // activeクラスをトグル
+            $(this).toggleClass('active');
+            return false;
+        });
+    });
+</script>
