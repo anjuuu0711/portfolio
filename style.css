@@ -148,6 +148,15 @@ header  {
     margin-bottom: 95%;
 }
 }
+@media screen and (max-width: 576.98px) {
+nav{
+    height: 63px;
+}
+nav p{
+    line-height: 31px;
+    margin: 0 auto;
+}
+}
 /* ========================================
     ハンバーガーメニューここから
 ========================================= */
@@ -280,6 +289,9 @@ header  {
 }
 .accordion-menu ul{
 	height: 100%;
+}
+.menu-trigger.active+.accordion-menu ul{
+    margin-top: 46px;
 }
 }
 /* ========================================
@@ -485,6 +497,7 @@ TOPページWORKSここから
     /* top: 1849px; */
     top:-7px;
     z-index: 3000;
+    height: 114%;
 }
 #bg_leaf1{
     position: absolute;
@@ -650,12 +663,15 @@ TOPページWORKSここから
 @media screen and (min-width: 1025px) {
 #works{
     margin-top: 12%;
-    height: 1522px;
+    /* height: 1522px; */
+    height:1786px;
 }
 #works ul{
     width: 1230px;
     top:22%;
 }
+}
+@media screen and (min-width: 1225px) {
 #upper,#middle,#lower{
     display: flex;
 }
@@ -668,17 +684,20 @@ TOPページWORKSここから
 #works_bg{
     height: 2134px;
 }
+#works li{
+    float: left;
+}
+}
+@media screen and (max-width: 1212.98px) {
 #works ul{
     width: 825px;
     top:16%;
-}
-#works li{
-    float: left;
 }
 }
 @media screen and (min-width: 769px) {
 #works li{
     margin: 30px;
+    float: left;
 }
 #bg_leaf1{
     width: 304px;
@@ -736,25 +755,37 @@ width: 237px;}
     width: 293px;
 }
 #works01 h3{
-    width: 204px;
+    width: 163px;
     height: 48px;
     line-height: 48px;
+    font-size: 16px;
 }
 #works02 h3{
-    width:  151px;
+    width:  121px;
     height: 48px;
     line-height: 48px;
+    font-size: 16px;
+
 }
 #works03 h3{
-    width:  107px;
+    width:  98px;
     height: 48px;
     line-height: 48px;
+    font-size: 18px;
+}
+#works04 h3, #works05 h3{
+    font-size: 15px;
+    width: 175px;
 }
 #works06 h3{
+    width: 100px;
     margin: 265px auto;
+    font-size: 14px;
 }
 #works07 h3, #works08 h3{
+    width: 197px;
     margin-top: 243px;
+    font-size: 14px;
 }
 #works01 span, #works02 span, #works03 span{
     font-size: 13px;
@@ -954,7 +985,8 @@ TOPページSKILLここから
     display: none;
 }
 #skill_bg02{
-    height: 1232px;
+    /* height: 1232px; */
+    height: 100%;
 }
 }
 /* ========================================
@@ -1141,6 +1173,7 @@ main{
     position: absolute;
     top:0;
     width: 100%;
+    height: 100%;
 }
 #main_bg02{
     display: none;
@@ -1158,11 +1191,10 @@ main{
     height: 1269px;
 }
 }
-@media screen and (min-width: 577px) {
-}
 @media screen and (max-width: 576.98px) {
 #content01 p{
     margin: 21px;
+    font-size: 15px;
 }
 #content01{
     width: 408px;
@@ -1178,12 +1210,15 @@ main{
     background-size: 116% 70%;
 }
 #content01 h1, #content02 h2{
-    font-size: 50px;
-    width: 195px;
+    font-size: 45px;
+    width: 172px;
 }
 #content02 ul{
     width: 410px;
     top: 28%;
+}
+#content02 li{
+    font-size: 15px;
 }
 }
 /* ======================================
@@ -1237,28 +1272,6 @@ WORKSページここから
   padding-bottom: 3px;
 }   */
 
-#next_btn a{
-    width: 181px;
-    position: absolute;
-    bottom: 16px;
-    right: 154px;
-    font-size: 20px;
-    background-image: url(image/portfolio_works/next_bt.png);
-    background-position: bottom 60% right;
-    background-repeat: no-repeat;
-    background-size: 25%;
-    color: #fff;
-}
-#next_btn a span{
-    position: absolute;
-    bottom: 21px;
-    right: 144px;
-    font-size: 18px;
-}
-#next_btn a:hover{
-    text-decoration: none;
-    opacity: 0.5;
-}
 #workMain h1{
     width: 347px;
     margin: 0 auto;
@@ -1268,7 +1281,8 @@ WORKSページここから
     letter-spacing: 0.05em;
     font-size: 65px;
     padding-top: 270px;
-} 
+    font-size: 45px;
+}
 
 table{
     /* width: 1030px; */
@@ -1435,9 +1449,6 @@ td h3{
     display: block;
     margin: 22px auto;
 }
-#next_btn a {
-    right: 130px;
-}
 }
 @media screen and (min-width: 577px) {
 
@@ -1459,8 +1470,9 @@ td h3{
     height: 4073px;
 }    
 #workMain h1{
-    width: 269px;
-    font-size: 50px;
+    width: 211px;
+    font-size: 40px;
+    padding-top: 310px;
 }
 .localnavi{
     width: 137px;
@@ -1484,9 +1496,6 @@ td h2, td h3{
 }
 #tab{
     width: 252px;
-}
-#next_btn a {
-    right: 84px;
 }
 }
 /* ======================================
@@ -1615,28 +1624,6 @@ WORKS03ページここから
 .work04{
     width: 126px;
 }
-#next a{
-    width: 181px;
-    position: absolute;
-    bottom: 16px;
-    right: 154px;
-    font-size: 15px;
-    background-image: url(image/portfolio_works/next_bt.png);
-    background-position: bottom 60% right;
-    background-repeat: no-repeat;
-    background-size: 25%;
-    color: #fff;
-}
-#next a span{
-    position: absolute;
-    bottom: 21px;
-    right: 144px;
-    font-size: 18px;
-}
-#next a:hover{
-    text-decoration: none;
-    opacity: 0.5;
-}
 @media screen and (max-width: 768.98px) {
 #wrap03{
     height: 3046px;
@@ -1645,11 +1632,6 @@ WORKS03ページここから
 @media screen and (max-width: 576.98px) {
 #detail img{
     width: 236px;
-}
-#next a{
-    bottom: 323px;
-    right: 70px;
-    font-size: 17px;
 }
 }
 /* ======================================
@@ -1764,10 +1746,11 @@ WORKS OTHERSページここから
     height: 100%;
 }
 #wrap04 h1{
-    width: 343px;
+    width: 282px;
+    font-size: 37px;
 }
 #wrap04 h1 span{
-    font-size: 30px;
+    font-size: 28px;
 }
 #name img{
     width: 262px;
@@ -1785,6 +1768,74 @@ WORKS OTHERSページここから
     width: 223px;
 }
 #prev_btn a{
-    left: 27px;
+    left: 10px;
+    font-size: 18px;
+    width: 145px;
+    padding-left: 42px;
+    width: 159px;
+    background-size: 22%;
+    bottom: 23px;
+}
+#prev_btn a span{
+    position: absolute;
+    bottom: 21px;
+    right: 69px;
+    font-size: 17px;
+}
+#wrap04 h2,#wrap04 h3,#wrap04 h4,#wrap04 h5,#wrap04 h6{
+    font-size:25px;
+    width: 101px;
+}
+#wrap04 h4,#wrap04 h5,#wrap04 h6{
+    width: 133px;
+}
+#wrap04 ul{
+    top: 88px;
+}
+}
+/* ======================================
+ ========================================
+next、prevボタンここから
+========================================= 
+========================================= */ 
+/* WORKSページ */
+#next_btn a{
+    width: 181px;
+    position: absolute;
+    bottom: 16px;
+    right: 154px;
+    font-size: 20px;
+    background-image: url(image/portfolio_works/next_bt.png);
+    background-position: bottom 60% right;
+    background-repeat: no-repeat;
+    background-size: 25%;
+    color: #fff;
+}
+#next_btn a span{
+    position: absolute;
+    bottom: 21px;
+    right: 144px;
+    font-size: 18px;
+}
+#next_btn a:hover{
+    text-decoration: none;
+    opacity: 0.5;
+}
+@media screen and (max-width: 768.98px) {
+#next_btn a {
+    right: 130px;
+}
+}
+@media screen and (max-width: 576.98px) {
+#next_btn a {
+    width: 146px;
+    right: 10px;
+    font-size: 17px;
+    background-size: 22%;
+    bottom: 23px;
+}
+#next_btn a span{
+    right: 112px;
+    font-size: 17px;
 }
 }
