@@ -833,6 +833,7 @@ TOPページSKILLここから
     width: 411px;
     float: left;
     margin: 25px;
+    height: 164px;
 }
 #illustrator,#photoshop{
     background-image: url(image/anjuito_portfolio/AI.png),url(image/anjuito_portfolio/level3.png);
@@ -1219,6 +1220,7 @@ main{
 }
 #content02 li{
     font-size: 15px;
+    background-position: bottom 25px left 0;
 }
 }
 /* ======================================
@@ -1273,7 +1275,7 @@ WORKSページここから
 }   */
 
 #workMain h1{
-    width: 347px;
+    width: 277px;
     margin: 0 auto;
     font-family: "HGP明朝B";
     color: #9e6936;
@@ -1762,14 +1764,14 @@ WORKS OTHERSページここから
     height: 100%;
 }
 #wrap04 h1{
-    width: 282px;
+    width: 348px;
     font-size: 37px;
 }
 #wrap04 h1 span{
     font-size: 28px;
 }
 #name img{
-    width: 262px;
+    width: 219px;
 }
 #logo02_tb img{
     width: 240px;
@@ -1807,6 +1809,9 @@ WORKS OTHERSページここから
 }
 #wrap04 ul{
     top: 88px;
+}
+#wrap04 h2{
+    width: 135px;
 }
 }
 /* ======================================
