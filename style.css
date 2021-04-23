@@ -1375,11 +1375,11 @@ td h3{
     color: #fff;
     text-decoration: none;
 }
-#work td h3 a:hover{
+#work td h2 a:hover{
     color:#fff;
     text-decoration: none;
 }
-#work td h3 span:hover{
+#work td h2 span:hover{
     text-decoration: none;
     color: #fff;
     border-bottom:3px dotted#fff;
@@ -1437,7 +1437,9 @@ td h2,td h3{
     margin: auto;
     float: none;
 }
-
+#work td h2 a{
+    bottom: -761px;
+}
 td h2{
     background-position: top 55% center;
     height: 379px;
@@ -1472,7 +1474,7 @@ td h3{
     height: 4071px;
 }    
 #workMain h1{
-    width: 211px;
+    width: 269px;
     font-size: 40px;
     padding-top: 310px;
 }
@@ -1509,7 +1511,7 @@ td h3{
     width: 204px;
 }
 .work01{
-    width: 113px;
+    width: 126px;
 }
 }
 /* ======================================
@@ -1517,6 +1519,9 @@ td h3{
 WORKS02ページここから
 ========================================= 
 ========================================= */ 
+#res {
+position: relative;
+}
 #wrap02{
    height: 3698px;
 }
@@ -1535,7 +1540,7 @@ WORKS02ページここから
     width: 119px;
     height: 40px;
     background-image: url(image/portfolio_works/next_bt.png);
-    background-position: bottom 43% left 10%;
+    background-position: bottom 24% left 10%;
     background-repeat: no-repeat;
     background-size: 34%;
     position: absolute;
@@ -1543,10 +1548,10 @@ WORKS02ページここから
     right: 0;
     padding-left: 58px;
     margin: auto;
-    bottom: 21%;
+    bottom: 0;
     color: #fff;
     text-decoration: none;
-    font-size: 25px;
+    font-size: 32px;
 }
 #res a:hover{
     color:#fff;
@@ -1566,7 +1571,6 @@ WORKS02ページここから
     width: 223px;
 }
 #res a{
-    bottom: 770px;
     font-size: 30px;
 }
 }
@@ -1758,6 +1762,21 @@ WORKS OTHERSページここから
 #prev_btn a{
     bottom: 23px;
 }
+#prev_btn a{
+    left: 10px;
+    font-size: 18px;
+    width: 145px;
+    padding-left: 42px;
+    width: 159px;
+    background-size: 22%;
+    bottom: 23px;
+}
+#prev_btn a span{
+    position: absolute;
+    bottom: 21px;
+    right: 69px;
+    font-size: 17px;
+}
 }
 @media screen and (max-width: 576.98px) {
 #wrap04{
@@ -1784,21 +1803,6 @@ WORKS OTHERSページここから
 }
 #banner03_tb img{
     width: 223px;
-}
-#prev_btn a{
-    left: 10px;
-    font-size: 18px;
-    width: 145px;
-    padding-left: 42px;
-    width: 159px;
-    background-size: 22%;
-    bottom: 23px;
-}
-#prev_btn a span{
-    position: absolute;
-    bottom: 21px;
-    right: 69px;
-    font-size: 17px;
 }
 #wrap04 h2,#wrap04 h3,#wrap04 h4,#wrap04 h5,#wrap04 h6{
     font-size:25px;
@@ -1843,11 +1847,6 @@ next、prevボタンここから
     opacity: 0.5;
 }
 @media screen and (max-width: 768.98px) {
-#next_btn a {
-    right: 130px;
-}
-}
-@media screen and (max-width: 576.98px) {
 #next_btn a {
     width: 146px;
     right: 10px;
