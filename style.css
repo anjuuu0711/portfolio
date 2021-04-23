@@ -955,7 +955,7 @@ TOPページSKILLここから
 }
 @media screen and (max-width: 576.98px) {
 #skill{
-    height: 1219px;
+    height: 1310px;
 }
 #skill h4 {
     top: 13%;
@@ -1467,7 +1467,7 @@ td h3{
 }
 @media screen and (max-width: 576.98px) {
 #wrap01 {
-    height: 4073px;
+    height: 4208px;
 }    
 #workMain h1{
     width: 211px;
@@ -1486,16 +1486,28 @@ td h3{
     text-decoration: none;  
     color: #fff;
 }    
-
+#work td h2 a{
+    bottom: -616px;
+}
 td{
     padding-left: 0;
 }
 td h2, td h3{
-    width:250px;
-    padding-left: 86px;
+    background-position: top 64% center;
+    width: 209px;
+    padding-left: 68px;
+}
+td h2{
+    height: 306px;
+}
+td h3{
+    height: 602px;
 }
 #tab{
-    width: 252px;
+    width: 204px;
+}
+.work01{
+    width: 125px;
 }
 }
 /* ======================================
@@ -1550,6 +1562,10 @@ WORKS02ページここから
 }
 #comp img{
     width: 223px;
+}
+#res a{
+    bottom: 16.8%;
+    font-size: 30px;
 }
 }
 /* ======================================
