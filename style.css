@@ -1114,11 +1114,11 @@ ABOUTページここから
 ========================================= */
 main{
     position: relative;
-    height: 1063px;
+    height: 1225px;
 }
 #content01,#content02{
     position: absolute;
-    top: 10%;
+    top: 15%;
     left: 0;
     right: 0;
     margin: auto;
