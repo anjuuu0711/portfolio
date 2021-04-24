@@ -1114,19 +1114,20 @@ ABOUTページここから
 ========================================= */
 main{
     position: relative;
-    height: 1268px;
+    height: 1063px;
 }
 #content01,#content02{
     position: absolute;
     top: 10%;
-    left:0;
+    left: 0;
     right: 0;
     margin: auto;
     width: 725px;
-    height: 576px;
+    padding-top: 7px;
+    height: 510px;
     background-image: url(image/portfolio_about/about_textbox.png);
     background-repeat: no-repeat;
-    background-size: 100%;
+    background-size: 90%;
     background-position: top 100% center;
 }
 #content01 h1,#content02 h2{
@@ -1139,9 +1140,7 @@ main{
     font-size: 65px;
 }
 #content01 p{
-    margin-top: 54px;
-    margin-bottom: 0 ;
-    margin-left: 54px;
+    margin: 54px;
     font-size: 18px;
     font-family: "HGP明朝B";
     letter-spacing:0.05em;
