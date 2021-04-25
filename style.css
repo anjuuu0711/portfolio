@@ -1334,7 +1334,7 @@ td li span{
     list-style: none;
 }
 
-#purpose td li:first-child,#target td li:first-child,#banner01_tb td li:first-child,#banner03_tb td li:first-child{
+#purpose td li:first-child,#target td li:first-child,#banner01_tb td li:first-child,#banner03_tb td li:first-child,#respon li:first-child{
     margin-left: 56px;
     list-style: inherit;
 }
