@@ -1599,7 +1599,7 @@ WORKS03ページここから
     width: 119px;
     height: 40px;
     background-image: url(image/portfolio_works/next_bt.png);
-    background-position: bottom 43% left 10%;
+    background-position: bottom 13% left 10%;
     background-repeat: no-repeat;
     background-size: 34%;
     position: absolute;
@@ -1610,7 +1610,7 @@ WORKS03ページここから
     bottom: -35px;
     color: #fff;
     text-decoration: none;
-    font-size: 25px;
+    font-size: 32px;
 }
 #detail a:hover{
     color:#fff;
