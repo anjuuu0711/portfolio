@@ -296,12 +296,11 @@ nav p{
 /* ========================================
 TOPページメインイメージここから
 ========================================= */
-
 #main_img img{
     display: block;
     width: 100% ;
     position: absolute;
-    top: 0;
+    top: 0; 
     z-index: 2000;
 }
 #main_img h1{
@@ -663,7 +662,8 @@ TOPページWORKSここから
 #works{
     margin-top: 12%;
     /* height: 1522px; */
-    height:1786px;
+    height: 2099px;
+}
 }
 #works ul{
     width: 1230px;
@@ -678,7 +678,7 @@ TOPページWORKSここから
 @media screen and (max-width: 1024.98px) {
 #works{
     margin-top: -8%;
-    height: 1807px;
+    height: 2101px;
 }
 #works_bg{
     height: 2134px;
@@ -726,7 +726,7 @@ width: 237px;}
 }
 @media screen and (max-width: 576.98px) {
 #works{
-    height: 2397px;
+    height: 2560px;
 }
 #works h2{
     width: 206px;
@@ -790,7 +790,7 @@ width: 237px;}
     font-size: 13px;
 }
 #works_bg {
-    height: 2522px;
+    height: 101%;
 }
 }
 /* ========================================
@@ -799,11 +799,18 @@ TOPページSKILLここから
 #skill{
     position: relative;
     z-index: 4000;
+    width: 100%;
+    background-image:url(image/anjuito_portfolio/skill_bg.png);
+    background-position:100%;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
 }
-#skill_bg01,#skill_bg02{
+
+#skill img{
     width: 100%;
     position: absolute;
     z-index: 3000;
+    top: -215px;
 }
 #skill h4{
     font-size: 65px;
@@ -895,26 +902,24 @@ TOPページSKILLここから
     height: 1373px;
 }
 #skill h4{
-    top:30%;
+    top:15%;
 }
 #skill ul{
-    top:40%;
+    top:25%;
 }
-}
-@media screen and (max-width: 1058.98px) {
-#skill_bg01,#skill_bg02{
-    height: 100%;
-}    
 }
 @media screen and (max-width: 1024.98px) {
 #skill{
-    height: 1350px;
+    height: 1085px;
 }
 #skill h4{
-    top:23%;
+    top: 10%;
 }
 #skill ul{
-    top:33%;
+    top: 22%;
+}
+#skill img{
+    top: -165px;
 }
 }
 @media screen and (min-width: 769px) {
@@ -931,7 +936,7 @@ TOPページSKILLここから
     height: 1013px;
 }
 #skill h4{
-    top:23%;
+    top:15%;
 }
 #skill li{
     width: 296px;
@@ -939,32 +944,27 @@ TOPページSKILLここから
 }
 #skill ul {
     width: 693px;
-    top: 34%;
+    top: 29%;
 }
-#skill li {
-    width: 296px;
+#skill img{
+    top: -121px;
 }
 #illustrator span,#photoshop span,#htmlcss span,#bootstrap span,#js span{
     font-size: 14px;
 }
 }
-@media screen and (min-width: 577px) {
-#skill_bg02{
-    display: none;
-}
-}
 @media screen and (max-width: 576.98px) {
 #skill{
-    height: 1310px;
+    height: 1255px;
 }
 #skill h4 {
-    top: 13%;
+    top: 6%;
     font-size: 50px;
     width: 167px;
 }   
 #skill ul{
     width: 319px;
-    top: 19%;
+    top: 15%;
 }
 #skill li{
     width: 319px;
@@ -973,20 +973,15 @@ TOPページSKILLここから
     position: relative;
     margin: 0;
 }
-
+#skill img{
+    top: -68px;
+}
 #illustrator span, #photoshop span, #htmlcss span, #bootstrap span, #js span{
     font-size: 14px;
     position: absolute;
     left:0;
     top:53%;
     top: 44%;
-}
-#skill_bg01{
-    display: none;
-}
-#skill_bg02{
-    /* height: 1232px; */
-    height: 100%;
 }
 }
 /* ========================================
@@ -997,20 +992,21 @@ TOPページCONTACTここから
     position: relative;
     z-index: 4000;
 }
-#contact img{
+#contact{
+    position: relative;
+    z-index: 4000;
     width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    z-index: 3000;
+    background-image: url(image/anjuito_portfolio/moon.png),url(image/anjuito_portfolio/palmtree.png),url(image/anjuito_portfolio/contact_bg.png);
+    background-position: top 21% right 23%,bottom 0 center,100%;
+    background-repeat: no-repeat;
+    background-size: 6%,55%, 100% 100%;
 }
-
 #contact h4{
     font-size: 65px;
     color: #1c3532;
     font-family: "HGP明朝B";
     font-style: italic;
-    letter-spacing: 0.1em;
+    letter-spacing: 0.1em;  
     z-index: 3500;
     position: absolute;
     /* top: 115px; */
@@ -1035,7 +1031,7 @@ TOPページCONTACTここから
     background-image: url(image/anjuito_portfolio/mail.png);
     background-position: top 30% left 50%;
     background-repeat: no-repeat;
-    background-size: 78%;
+    background-size: 70%;
 }
 #contact a:hover{
     background-image: url(image/anjuito_portfolio/mail_hover.png);
@@ -1071,7 +1067,7 @@ TOPページCONTACTここから
     width: 273px;
 }
 #contact a{
-    background-size: 42%;
+    background-size: 40%;
     width: 344px;
     height: 200px;
     top: 131px;
@@ -1111,6 +1107,14 @@ footer p{
 ABOUTページここから
 ========================================= 
 ========================================= */
+#about_main{
+    width: 100%;
+    background-image: url(image/portfolio_about/arch.png),url(image/portfolio_about/about_background.png);
+    background-position: bottom -68px center,100% 100%;
+    background-repeat: no-repeat;
+    background-size: 65%,100% 100%;
+}
+
 main{
     position: relative;
     height: 1225px;
@@ -1166,29 +1170,6 @@ main{
     background-repeat: no-repeat;
     background-size:15px 15px;
     background-position: bottom 5px left 0;
-}
-@media screen and (min-width: 1025px) {
-#main_bg01{
-    position: absolute;
-    top:0;
-    width: 100%;
-    height: 100%;
-}
-#main_bg02{
-    display: none;
-}
-}
-@media screen and (max-width: 1024.98px) {
-#main_bg01{
-    display: none;
-}
-#main_bg02{
-    position: absolute;
-    top:0;
-    object-fit: cover;
-    width: 100%;
-    height: 1269px;
-}
 }
 @media screen and (max-width: 576.98px) {
 #content01 p{
@@ -1877,5 +1858,4 @@ next、prevボタンここから
 #next_btn01 a{
     width: 155px;
 }
-
 }
