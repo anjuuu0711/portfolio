@@ -1148,6 +1148,7 @@ main{
     font-family: "HGP明朝B";
     letter-spacing:0.05em;
     color: #1c3532;
+    line-height: 30px;
 }
 #content02{
     top: 60%;
