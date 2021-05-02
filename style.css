@@ -565,9 +565,9 @@ TOPページWORKSここから
     background-image: url(image/anjuito_portfolio/design03.png);
 }
 #works04{
-    background-image: url(image/anjuito_portfolio/carus_logo01.png);
-    background-size: 100%;
-    background-position: 50% 18%;
+    background-image: url(image/anjuito_portfolio/design04.png);
+    background-size: 70%;
+    background-position: 50%;
 }
 #works05{
     background-image: url(image/anjuito_portfolio/carus_logo03.png);
@@ -605,7 +605,7 @@ TOPページWORKSここから
     background-color: rgba(203,165,144,0.5);
     background-position: -100% 100%;
 }
-#works01 h3,#works02 h3,#works03 h3{
+#works01 h3,#works02 h3,#works03 h3,#works04 h3{
     width: 220px;
     height: 24px;
     font-size: 20px;
@@ -615,7 +615,10 @@ TOPページWORKSここから
 #works02 h3{
     width: 151px;
 }
-#works04 h3,#works05 h3{
+#works04 h3{
+    margin: 9px auto;
+}
+#works05 h3{
     width: 258px;
     font-size: 20px;
     font-family: "HGP明朝B";
@@ -647,7 +650,7 @@ TOPページWORKSここから
     margin-top: 226px;
 }
 
-#works01 span,#works02 span,#works03 span{
+#works01 span,#works02 span,#works03 span,#works04 span{
     position:absolute;
     left: 5%;
     bottom: 5%;
@@ -658,6 +661,12 @@ TOPページWORKSここから
 #works03 span{
     left: 24%;
 }
+#works04 span{
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 157px;
+}   
 @media screen and (min-width: 1025px) {
 #works{
     margin-top: 12%;
@@ -899,7 +908,7 @@ TOPページSKILLここから
 }
 @media screen and (min-width: 1025px) {
 #skill{
-    height: 1376px;
+    height: 1375px;
 }
 #skill h4{
     top:15%;
@@ -1144,7 +1153,7 @@ main{
 }
 #content01 p{
     margin: 54px;
-    font-size: 17px;
+    font-size: 18px;
     font-family: "HGP明朝B";
     letter-spacing:0.05em;
     color: #1c3532;
@@ -1218,8 +1227,7 @@ WORKSページここから
 }
 /* -- ローカルナビゲーション -- */  
 .localnavi {  
-    width: 658px;
-    height: 45px;
+    width: 936px;
     position: absolute;
     top:162px;
     left: 0;
@@ -1316,7 +1324,7 @@ td li span{
     list-style: none;
 }
 
-#purpose td li:first-child,#target td li:first-child,#banner01_tb td li:first-child,#banner03_tb td li:first-child,#respon li:first-child{
+#purpose td li:first-child,#target td li:first-child,#banner01_tb td li:first-child,#banner03_tb td li:first-child,#respon li:first-child,#purpose td li:first-child, #target td li:first-child, #banner01_tb td li:first-child, #banner03_tb td li:first-child, #work04_idea li:first-child{
     margin-left: 56px;
     list-style: inherit;
 }
@@ -1381,19 +1389,51 @@ td h3{
 #works_footer small{
     color: #000;
 }
+/* ローカルナビレスポンシブ */
+@media screen and (min-width: 992px) {
+
+.localnavi li:first-child{
+    border-left: 1px solid #cccccc;  
+}
+.localnavi li { 
+    border-right: 1px solid #cccccc;  
+}
+.localnavi a:hover {  
+    text-decoration: none;  
+    color: #fff;
+    border-bottom:3px dotted#cccccc;
+    padding-bottom: 3px;
+}    
+}
+
+@media screen and (max-width: 991.98px) {
+#workMain h1{
+    padding-top: 385px;
+    width: 243px;
+}
+.localnavi{
+    width: 279px;
+    top: 4.3%;
+}
+.localnavi li{
+    float: none;
+    border-bottom: 1px solid #cccccc;
+}
+.localnavi a:hover {  
+    text-decoration: none;  
+    color: #fff;
+}    
+.localnavi li{
+    width: 279px;
+    padding: 7px 0;
+}
+}
+
 @media screen and (max-width: 768.98px) {
 #wrap01{
     height: 3916px;
     background-color: #113233;
     position: relative;
-}
-.localnavi{
-    width: 545px;
-    top: 4%;
-}
-.localnavi li{
-    width: 136px;
-    padding: 7px 0;
 }
 .localnavi a{
     font-size: 18px;
@@ -1434,42 +1474,15 @@ td h3{
     margin: 22px auto;
 }
 }
-@media screen and (min-width: 577px) {
-
-.localnavi li:first-child{
-    border-left: 1px solid #cccccc;  
-}
-.localnavi li { 
-    border-right: 1px solid #cccccc;  
-}
-.localnavi a:hover {  
-    text-decoration: none;  
-    color: #fff;
-    border-bottom:3px dotted#cccccc;
-    padding-bottom: 3px;
-  }    
-}
 @media screen and (max-width: 576.98px) {
 #wrap01 {
     height: 4071px;
 }    
 #workMain h1{
-    width: 269px;
+    width: 216px;
     font-size: 40px;
-    padding-top: 310px;
+    padding-top: 370px;
 }
-.localnavi{
-    width: 137px;
-    top: 2.3%;
-}
-.localnavi li{
-    float: none;
-    border-bottom: 1px solid #cccccc;
-}
-.localnavi a:hover {  
-    text-decoration: none;  
-    color: #fff;
-}    
 #work td h2 a{
     bottom: -616px;
 }
@@ -1626,9 +1639,6 @@ WORKS03ページここから
     margin-top: 55px;
 }    
 
-.work04{
-    width: 126px;
-}
 @media screen and (max-width: 768.98px) {
 #wrap03{
     height: 3288px;
@@ -1647,11 +1657,47 @@ WORKS03ページここから
 }
 /* ======================================
  ========================================
+WORKS04ページここから
+========================================= 
+========================================= */ 
+#work h4 img,#work h5 img{
+    width: 250px;
+    background-image: none;
+    float: left;
+    margin: 0 23px;
+    padding-top: 50px;
+}
+.work04{
+    width: 235px;
+    margin: 0 22px !important;
+    font-size: 18px!important;
+}
+#works04_table{
+    height: 1815px;
+}
+#wrap05{
+    height: 2392px;
+}
+#speci{
+    width: 278px;
+}
+#work h5 img{
+    padding-top: 42px;
+}
+@media screen and (max-width: 768.98px) {
+#wrap05 {
+    height: 3283px;
+}
+}
+
+
+/* ======================================
+ ========================================
 WORKS OTHERSページここから
 ========================================= 
 ========================================= */ 
 #wrap04{
-    height: 7079px;
+    height: 5500px;
 }
 #wrap04 ul{
     top: 162px;
@@ -1692,7 +1738,7 @@ WORKS OTHERSページここから
     margin: 110px auto;
 }
 #name img{
-    width: 406px;
+    width: 273px;
     margin: 0 auto;
     display: block;
 }
@@ -1720,7 +1766,7 @@ WORKS OTHERSページここから
     width: 275px;
     padding-top: 15px;
 }
-#prev_btn a{
+#prev_btn a,#prev_oth a{
     width: 181px;
     position: absolute;
     bottom: 16px;
@@ -1733,19 +1779,32 @@ WORKS OTHERSページここから
     color: #fff;
     padding-left: 55px;
 }
-#prev_btn a span{
+#prev_btn a span,#prev_oth a span{
     position: absolute;
     bottom: 21px;
     right: 90px;
     font-size: 18px;
 }
-#prev_btn a:hover{
+#prev_btn a:hover,#prev_oth a:hover{
     text-decoration: none;
     opacity: 0.5;
 }
+#prev_oth a{
+    width: 324px;
+    font-size: 18px;
+    background-size: 14%;
+}
+#prev_oth a span{
+    right: 231px;
+}
+@media screen and (max-width: 991.98px) {
+#wrap04 h2 {
+    top: 530px;
+}
+}
 @media screen and (max-width: 768.98px) {
 #wrap04{
-    height: 7596px;
+    height: 5800px;
 }
     
 #prev_btn a{
@@ -1765,6 +1824,9 @@ WORKS OTHERSページここから
     bottom: 21px;
     right: 69px;
     font-size: 17px;
+}
+#wrap04 h2 {
+    top: 529px;
 }
 }
 @media screen and (max-width: 576.98px) {
@@ -1804,7 +1866,8 @@ WORKS OTHERSページここから
     top: 88px;
 }
 #wrap04 h2{
-    width: 135px;
+    width: 101px;
+    top: 496px;
 }
 }
 /* ======================================
@@ -1813,7 +1876,7 @@ next、prevボタンここから
 ========================================= 
 ========================================= */ 
 /* WORKSページ */
-#next_btn a,#next_btn01 a{
+#next_btn a,#next_btn01 a,#next_btn02 a{
     width: 181px;
     position: absolute;
     bottom: 16px;
@@ -1828,18 +1891,48 @@ next、prevボタンここから
 #next_btn01 a{
     width: 190px;
 }
+#next_btn02 a{
+    width: 288px;
+    font-size: 18px;
+    background-size: 15%;
+}
 #next_btn01 a span{
     right: 152px!important;
 }
-#next_btn a span,#next_btn01 a span{
+#next_btn02 a span{
+    right: 250px!important;
+}
+#next_btn a span,#next_btn01 a span,#next_btn02 a span{
     position: absolute;
     bottom: 21px;
     right: 144px;
     font-size: 18px;
 }
-#next_btn a:hover,#next_btn01 a:hover{
+#next_btn a:hover,#next_btn01 a:hover,#next_btn02 a:hover{
     text-decoration: none;
     opacity: 0.5;
+}
+@media screen and (max-width: 991.98px) {
+#prev_btn a{
+    left: 10px;
+}
+#next_btn01 a{
+    right: 10px;
+}  
+#next_btn02 a{
+    width: 240px;
+    right: 10px;
+    font-size: 15px;
+}
+#prev_btn a span{
+    right: 90px;
+}
+#next_btn02 a span{
+    right: 90px;
+}
+#prev_oth a{
+    left:10px;
+}
 }
 @media screen and (max-width: 768.98px) {
 #next_btn a,#next_btn01 a{
@@ -1858,5 +1951,8 @@ next、prevボタンここから
 }
 #next_btn01 a{
     width: 155px;
+}
+#next_btn02 a span{
+    right: 203px!important;
 }
 }
