@@ -1233,11 +1233,36 @@ main{
 }
 /* ======================================
  ========================================
+デスクトップスクロールここから
+========================================= 
+========================================= */ 
+.display{
+    width: 554px;
+    margin: 66px auto;
+    position: relative;
+}
+.display img{
+    width: 554px;
+}
+#scsh{
+    display: inline-block;
+    width: 449px;
+    position: absolute;
+    top: 46px;
+    left: 70px;
+    overflow: scroll;
+    height: 304px;
+}
+#scsh img{
+    width: 433px;
+}
+/* ======================================
+ ========================================
 WORKSページここから
 ========================================= 
 ========================================= */ 
 #wrap01{
-    height: 3030px;
+    height: 3596px;
 }
 #workMain{
     background-color: #113233;
@@ -1297,7 +1322,7 @@ WORKSページここから
     font-style: italic;
     letter-spacing: 0.05em;
     font-size: 65px;
-    padding-top: 270px;
+    padding-top: 311px;
     font-size: 45px;
 }
 
@@ -1433,7 +1458,7 @@ td h3{
 }
 @media screen and (max-width: 768.98px) {
 #wrap01{
-    height: 3916px;
+    height: 4816px;
     background-color: #113233;
     position: relative;
 }
@@ -1502,7 +1527,7 @@ td h3{
 }
 @media screen and (max-width: 576.98px) {
 #wrap01 {
-    height: 4071px;
+    height: 4471px;
 }    
 #workMain h1{
     width: 216px;
@@ -1548,7 +1573,7 @@ WORKS02ページここから
 position: relative;
 }
 #wrap02{
-   height: 3698px;
+   height: 4398px;
 }
 #comp img{
     width: 280px;
@@ -1588,9 +1613,15 @@ position: relative;
     border-bottom:3px dotted#fff;
     padding-bottom: 3px;
 }
+@media screen and (max-width: 768.98px) {
+#wrap02{
+    height: 4698px;
+}
+
+}
 @media screen and (max-width: 576.98px) {
 #wrap02{
-    height: 4073px;
+    height: 4573px;
 }
 #comp img{
     width: 223px;
@@ -1608,7 +1639,7 @@ WORKS03ページここから
     position: relative;
 }
 #wrap03{
-    height: 2365px;
+    height: 2965px;
 }
 #work03_tb{
     height: 1566px;
@@ -1673,7 +1704,7 @@ WORKS03ページここから
 
 @media screen and (max-width: 768.98px) {
 #wrap03{
-    height: 3288px;
+    height: 3988px;
 }
 #detail a{
     bottom: -20px;
@@ -1708,7 +1739,7 @@ WORKS04ページここから
     height: 1815px;
 }
 #wrap05{
-    height: 2457px;
+    height: 3057px;
 }
 #speci{
     width: 278px;
@@ -1718,7 +1749,7 @@ WORKS04ページここから
 }
 @media screen and (max-width: 768.98px) {
 #wrap05 {
-    height: 3283px;
+    height: 3883px;
 }
 }
 
@@ -1728,7 +1759,7 @@ WORKS06ページここから
 ========================================= 
 ========================================= */ 
 #wrap06{
-    height: 3943px;
+    height: 4643px;
 }
 #speci02{
     width: 295px;
@@ -1739,7 +1770,7 @@ WORKS06ページここから
 }
 @media screen and (max-width: 768.98px) {
 #wrap06 {
-    height: 6314px;
+    height: 6814px;
 }
 }
 /* ======================================
