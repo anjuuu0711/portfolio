@@ -540,17 +540,13 @@ TOPページWORKSここから
     position: relative;
     /* float: left; */
 }
-#middle{
-    width: 820px;
-    margin: 0 auto;
-}
 #works li:hover{
     -webkit-transform: translateY(-8px);
     -ms-transform: translateY(-8px);
     transform: translateY(-8px);
 }
 #works01 ,#works02 ,#works03 ,#works04, 
-#works05,#works06 ,#works07 ,#works08 {
+#works05,#works06 ,#works07 ,#works08,#works09 {
     background-size: 70%;
     background-repeat:no-repeat ;
     background-position: 50%;
@@ -586,9 +582,13 @@ TOPページWORKSここから
     background-image: url(image/anjuito_portfolio/leather_banner.png);
     background-position: top 17% left 50%;
 }
+#works09{
+    background-image: url(image/anjuito_portfolio/design05.png);
+    background-position: top 64% left 50%;
+}
 
 #works01 a,#works02 a,#works03 a,#works04 a,
-#works05 a,#works06 a,#works07 a,#works08 a{
+#works05 a,#works06 a,#works07 a,#works08 a,#works09 a{
     display: block;
     color: #1c3532;
     width: 350px;
@@ -601,11 +601,11 @@ TOPページWORKSここから
     height: 319px;
 }
 #works01 a:hover,#works02 a:hover,#works03 a:hover,#works04 a:hover,
-#works05 a:hover,#works06 a:hover,#works07 a:hover,#works08 a:hover{
+#works05 a:hover,#works06 a:hover,#works07 a:hover,#works08 a:hover,#works09 a:hover{
     background-color: rgba(203,165,144,0.5);
     background-position: -100% 100%;
 }
-#works01 h3,#works02 h3,#works03 h3,#works04 h3{
+#works01 h3,#works02 h3,#works03 h3,#works04 h3,#works09 h3{
     width: 220px;
     height: 24px;
     font-size: 20px;
@@ -649,8 +649,10 @@ TOPページWORKSここから
     margin: auto;
     margin-top: 226px;
 }
-
-#works01 span,#works02 span,#works03 span,#works04 span{
+#works09 h3{
+    width: 229px;
+}
+#works01 span,#works02 span,#works03 span,#works04 span,#works09 span{
     position:absolute;
     left: 5%;
     bottom: 5%;
@@ -667,12 +669,23 @@ TOPページWORKSここから
     margin: auto;
     width: 157px;
 }   
+#works09 span{
+    width: 81px;
+    bottom:3%;
+    left:0;
+    right: 0;
+    margin: auto;
+}
+@media screen and (min-width: 1212px) {
+#works{
+    height: 1966px!important;
+}    
+}
 @media screen and (min-width: 1025px) {
 #works{
     margin-top: 12%;
     /* height: 1522px; */
-    height: 2099px;
-}
+    height: 2534px;
 }
 #works ul{
     width: 1230px;
@@ -687,13 +700,19 @@ TOPページWORKSここから
 @media screen and (max-width: 1024.98px) {
 #works{
     margin-top: -8%;
-    height: 2101px;
+    height: 2463px;
 }
 #works_bg{
-    height: 2134px;
+    height: 2457px;
 }
 #works li{
     float: left;
+}
+}
+@media screen and (min-width: 1213px) {
+#middle{
+    width: 1230px;
+    margin: 0 auto;
 }
 }
 @media screen and (max-width: 1212.98px) {
@@ -759,7 +778,7 @@ width: 237px;}
     height: 263px;
     float: none;
 }
-#works01 a, #works02 a, #works03 a, #works04 a, #works05 a, #works06 a, #works07 a, #works08 a{
+#works01 a, #works02 a, #works03 a, #works04 a, #works05 a, #works06 a, #works07 a, #works08 a,#works09 a{
     width: 293px;
 }
 #works01 h3{
@@ -1227,18 +1246,26 @@ WORKSページここから
 }
 /* -- ローカルナビゲーション -- */  
 .localnavi {  
-    width: 936px;
+    width: 493px;
     position: absolute;
     top:162px;
     left: 0;
     right: 0;
     margin: auto;
 }    
-.localnavi li { 
+.localnavi02 {
+    width: 778px;
+    position: absolute;
+    top:210px;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+.localnavi li ,.localnavi02 li{ 
     width: 164px;
     float: left;
 }  
-.localnavi a {  
+.localnavi a ,.localnavi02 a{  
     text-decoration: none;  
     display: block;  
     color: #cccccc;
@@ -1390,52 +1417,51 @@ td h3{
     color: #000;
 }
 /* ローカルナビレスポンシブ */
-@media screen and (min-width: 992px) {
-
-.localnavi li:first-child{
+@media screen and (min-width: 769px) {
+.localnavi li:first-child,.localnavi02 li:first-child{
     border-left: 1px solid #cccccc;  
 }
-.localnavi li { 
+.localnavi li,.localnavi02 li { 
     border-right: 1px solid #cccccc;  
 }
-.localnavi a:hover {  
+.localnavi a:hover ,.localnavi02 a:hover{  
     text-decoration: none;  
     color: #fff;
     border-bottom:3px dotted#cccccc;
     padding-bottom: 3px;
 }    
 }
-
-@media screen and (max-width: 991.98px) {
-#workMain h1{
-    padding-top: 385px;
-    width: 243px;
-}
-.localnavi{
-    width: 279px;
-    top: 4.3%;
-}
-.localnavi li{
-    float: none;
-    border-bottom: 1px solid #cccccc;
-}
-.localnavi a:hover {  
-    text-decoration: none;  
-    color: #fff;
-}    
-.localnavi li{
-    width: 279px;
-    padding: 7px 0;
-}
-}
-
 @media screen and (max-width: 768.98px) {
 #wrap01{
     height: 3916px;
     background-color: #113233;
     position: relative;
 }
-.localnavi a{
+#workMain h1{
+    padding-top: 453px;
+    width: 243px;
+}
+.localnavi{
+    width: 279px;
+    top: 150px;
+}
+.localnavi02{
+    width: 279px;
+    top: 273px;
+    border-left: 0;
+    border-bottom: 0;
+}
+.localnavi li,.localnavi02 li{
+    float: none;
+    border-bottom: 1px solid #cccccc;
+    width: 279px;
+    padding: 7px 0;
+}
+.localnavi a:hover,.localnavi02 a:hover {  
+    text-decoration: none;  
+    color: #fff;
+}    
+.localnavi a,.localnavi02 a{
     font-size: 18px;
 }
 .work01 {
@@ -1485,6 +1511,12 @@ td h3{
 }
 #work td h2 a{
     bottom: -616px;
+}
+.localnavi{
+    top:101px;
+}
+.localnavi02{
+    top:223px;
 }
 td{
     padding-left: 0;
@@ -1676,7 +1708,7 @@ WORKS04ページここから
     height: 1815px;
 }
 #wrap05{
-    height: 2392px;
+    height: 2457px;
 }
 #speci{
     width: 278px;
@@ -1690,7 +1722,26 @@ WORKS04ページここから
 }
 }
 
-
+/* ======================================
+ ========================================
+WORKS06ページここから
+========================================= 
+========================================= */ 
+#wrap06{
+    height: 3943px;
+}
+#speci02{
+    width: 295px;
+}
+#speci02 a{
+    font-size: 18px;
+    margin: 0 22px !important;
+}
+@media screen and (max-width: 768.98px) {
+#wrap06 {
+    height: 6314px;
+}
+}
 /* ======================================
  ========================================
 WORKS OTHERSページここから
@@ -1698,9 +1749,6 @@ WORKS OTHERSページここから
 ========================================= */ 
 #wrap04{
     height: 5500px;
-}
-#wrap04 ul{
-    top: 162px;
 }
 #wrap04 h1{
     width: 456px;
@@ -1799,7 +1847,7 @@ WORKS OTHERSページここから
 }
 @media screen and (max-width: 991.98px) {
 #wrap04 h2 {
-    top: 530px;
+    top: 417px;
 }
 }
 @media screen and (max-width: 768.98px) {
@@ -1826,7 +1874,7 @@ WORKS OTHERSページここから
     font-size: 17px;
 }
 #wrap04 h2 {
-    top: 529px;
+    top: 603px;
 }
 }
 @media screen and (max-width: 576.98px) {
@@ -1862,9 +1910,6 @@ WORKS OTHERSページここから
 #wrap04 h4,#wrap04 h5,#wrap04 h6{
     width: 133px;
 }
-#wrap04 ul{
-    top: 88px;
-}
 #wrap04 h2{
     width: 101px;
     top: 496px;
@@ -1876,7 +1921,7 @@ next、prevボタンここから
 ========================================= 
 ========================================= */ 
 /* WORKSページ */
-#next_btn a,#next_btn01 a,#next_btn02 a{
+#next_btn a,#next_btn01 a,#next_btn02 a,#next_btn03 a{
     width: 181px;
     position: absolute;
     bottom: 16px;
@@ -1889,26 +1934,32 @@ next、prevボタンここから
     color: #fff;
 }
 #next_btn01 a{
-    width: 190px;
+    width: 290px;
+    background-size: 16%;
+    right: 137px;
+    font-size: 17px;
 }
 #next_btn02 a{
     width: 288px;
     font-size: 18px;
     background-size: 15%;
 }
+#next_btn03 a{
+    background-size: 20%;
+}
 #next_btn01 a span{
-    right: 152px!important;
+    right: 252px!important;
 }
 #next_btn02 a span{
     right: 250px!important;
 }
-#next_btn a span,#next_btn01 a span,#next_btn02 a span{
+#next_btn a span,#next_btn01 a span,#next_btn02 a span,#next_btn03 a span{
     position: absolute;
     bottom: 21px;
     right: 144px;
     font-size: 18px;
 }
-#next_btn a:hover,#next_btn01 a:hover,#next_btn02 a:hover{
+#next_btn a:hover,#next_btn01 a:hover,#next_btn02 a:hover,#next_btn03 a:hover{
     text-decoration: none;
     opacity: 0.5;
 }
@@ -1954,5 +2005,15 @@ next、prevボタンここから
 }
 #next_btn02 a span{
     right: 203px!important;
+}
+#next_btn03 a{
+    right: 6px;
+    bottom: 54px;
+}
+}
+@media screen and (max-width: 576.98px) {
+#next_btn01 a span{
+    right: 119px!important;
+    bottom: 46px;
 }
 }
