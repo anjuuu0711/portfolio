@@ -1256,6 +1256,23 @@ main{
 #scsh img{
     width: 433px;
 }
+@media screen and (max-width: 576.98px) {
+.display{
+    width: 354px;
+}
+.display img{
+    width: 354px;
+}
+#scsh{
+    width: 296px;
+    height: 192px;
+    top: 30px;
+    left: 45px;
+}
+#scsh img{
+    width: 286px;
+}
+}
 /* ======================================
  ========================================
 WORKSページここから
@@ -1530,8 +1547,8 @@ td h3{
     height: 4471px;
 }    
 #workMain h1{
-    width: 216px;
-    font-size: 40px;
+    width: 183px;
+    font-size: 35px;
     padding-top: 370px;
 }
 #work td h2 a{
