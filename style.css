@@ -1393,7 +1393,10 @@ td li span{
     list-style: none;
 }
 
-#purpose td li:first-child,#target td li:first-child,#banner01_tb td li:first-child,#banner03_tb td li:first-child,#respon li:first-child,#purpose td li:first-child, #target td li:first-child, #banner01_tb td li:first-child, #banner03_tb td li:first-child, #work04_idea li:first-child{
+#purpose td li:first-child,#target td li:first-child,#banner01_tb td li:first-child,
+#banner03_tb td li:first-child,#respon li:first-child,#purpose td li:first-child, 
+#target td li:first-child, #banner01_tb td li:first-child, #banner03_tb td li:first-child, 
+#work04_idea li:first-child,#work06_idea li:first-child{
     margin-left: 56px;
     list-style: inherit;
 }
