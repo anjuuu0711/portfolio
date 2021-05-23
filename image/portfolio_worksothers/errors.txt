@@ -1,2 +1,0 @@
-[2021-4-11 20:11:37] layer "    ": Expected Either a default asset specification or a layer asset specification but " " found.
-[2021-4-11 20:11:37] layer "    ": Expected Either a default asset specification or a layer asset specification but " " found.
