@@ -1432,7 +1432,7 @@ td li span{
 #purpose td li:first-child,#target td li:first-child,#banner01_tb td li:first-child,
 #banner03_tb td li:first-child,#respon li:first-child,#purpose td li:first-child, 
 #target td li:first-child, #banner01_tb td li:first-child, #banner03_tb td li:first-child, #banner04_tb td li:first-child,
-#work04_idea li:first-child,#work06_idea li:first-child{
+#work04_idea li:first-child,#work06_idea li:first-child, #banner05_tb td li:first-child{
     margin-left: 56px;
     list-style: inherit;
 }
@@ -1878,7 +1878,7 @@ WORKS OTHERSページここから
 ========================================= 
 ========================================= */ 
 #wrap04{
-    height: 7000px;
+    height: 7988px;
 }
 #wrap04 h1{
     width: 456px;
@@ -1892,6 +1892,12 @@ WORKS OTHERSページここから
 }
 #banner04_tb{
     height: 1188px;
+}
+#banner05_tb{
+    height: 1088px;
+}
+#banner05_tb img{
+    width: 468px !important;
 }
 #logo01_tb tr,#logo02_tb tr,#banner01_tb tr{
     margin-bottom: 20px;
@@ -1985,9 +1991,8 @@ WORKS OTHERSページここから
 }
 @media screen and (max-width: 768.98px) {
 #wrap04{
-    height: 7300px;
+    height: 8827px;
 }
-    
 #prev_btn a{
     bottom: 23px;
 }
@@ -2009,11 +2014,11 @@ WORKS OTHERSページここから
 #wrap04 h2 {
     top: 641px;
 }
+#banner05_tb img{
+    width: 382px !important;    
+}
 }
 @media screen and (max-width: 576.98px) {
-#wrap04{
-    height: 7800px;
-}
 #wrap04 h1{
     width: 348px;
     font-size: 37px;
@@ -2046,6 +2051,9 @@ WORKS OTHERSページここから
 #wrap04 h2{
     width: 101px;
     top: 596px;
+}
+#banner05_tb img{
+    width: 258px !important;
 }
 }
 /* ======================================
